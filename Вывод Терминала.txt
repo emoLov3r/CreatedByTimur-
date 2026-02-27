@@ -1,0 +1,108 @@
+Last login: Fri Feb 27 12:32:28 on ttys000
+fckda3mo@MacBook-Air-Alexander ~ % cd '/Users/fckda3mo/Desktop/c:c++/lab(1)vector'
+fckda3mo@MacBook-Air-Alexander lab(1)vector % echo "# CreatedByTimur-" >> README.md       
+fckda3mo@MacBook-Air-Alexander lab(1)vector % git init
+Initialized empty Git repository in /Users/fckda3mo/Desktop/c:c++/lab(1)vector/.git/
+fckda3mo@MacBook-Air-Alexander lab(1)vector % git add README.md
+fckda3mo@MacBook-Air-Alexander lab(1)vector % git commit -m "first commit"
+[main (root-commit) 66234c2] first commit
+ Committer: Alexander <fckda3mo@MacBook-Air-Alexander.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+fckda3mo@MacBook-Air-Alexander lab(1)vector % git branch -M main
+fckda3mo@MacBook-Air-Alexander lab(1)vector % git remote add origin https://github.com/emoLov3r/CreatedByTimur-.git
+fckda3mo@MacBook-Air-Alexander lab(1)vector % git push -u origin main
+Username for 'https://github.com': emoLov3r
+Password for 'https://emoLov3r@github.com': 
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/emoLov3r/CreatedByTimur-.git/'
+fckda3mo@MacBook-Air-Alexander lab(1)vector % Vasi0115
+zsh: command not found: Vasi0115
+fckda3mo@MacBook-Air-Alexander lab(1)vector % git clone https://github.com/emoLov3r/CreatedByTimur-.git
+Cloning into 'CreatedByTimur-'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+fckda3mo@MacBook-Air-Alexander lab(1)vector % cd CreatedByTimur
+cd: no such file or directory: CreatedByTimur
+fckda3mo@MacBook-Air-Alexander lab(1)vector % cd CreatedByTimur-
+fckda3mo@MacBook-Air-Alexander CreatedByTimur- % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	gitignore
+	include/
+	makefile
+	src/
+	vector
+	vector.o
+
+nothing added to commit but untracked files present (use "git add" to track)
+fckda3mo@MacBook-Air-Alexander CreatedByTimur- % touch .gitignore
+fckda3mo@MacBook-Air-Alexander CreatedByTimur- % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	.gitignore
+	gitignore
+	include/
+	makefile
+	src/
+	vector
+	vector.o
+
+nothing added to commit but untracked files present (use "git add" to track)
+fckda3mo@MacBook-Air-Alexander CreatedByTimur- % ls -a
+.		.DS_Store	.gitignore	makefile	src		vector.o
+..		.git		include		README.md	vector
+fckda3mo@MacBook-Air-Alexander CreatedByTimur- % nano .gitignore
+
+  UW PICO 5.09                                        File: .gitignore                                        Modified  
+
+*.exe
+*.o
+*.csvs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^G Get Help         ^O WriteOut         ^R Read File        ^Y Prev Pg          ^K Cut Text         ^C Cur Pos          
+^X Exit             ^J Justify          ^W Where is         ^V Next Pg          ^U UnCut Text       ^T To Spell        
