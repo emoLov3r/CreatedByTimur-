@@ -35,7 +35,7 @@ void push_vector (Vector *v, void* value){
     }
     if (v -> lenght == v -> capacity) {
         size_t new_capacity = v -> capacity * 2;
-        size_t new_data = realloc(v -> data, v -> capacity * v -> element_size);
+        void* new_data = realloc(v -> data, v -> capacity * v -> element_size);
         if (v -> data == NULL){
             return;
         }
@@ -97,6 +97,7 @@ Vector* sum_vector(Vector *v1, Vector *v2){
         push_vector(result, sum);
         free(sum);
     }
+    return result;
 }
 
 double multiply_vector(Vector *v1, Vector *v2){
