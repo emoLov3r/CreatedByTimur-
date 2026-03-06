@@ -24,7 +24,7 @@ void int_input(Vector* v) {
     for (int i = 0; i < count; i++) {
         printf("Введите %d число: ", i + 1);
         scanf("%d", &value);
-        push_back(v, &value);
+        push_vector(v, &value);
     }
 }
 
@@ -36,7 +36,7 @@ void float_input(Vector* v) {
     for (int i = 0; i < count; i++) {
         printf("Введите %d число: ", i + 1);
         scanf("%f", &value);
-        push_back(v, &value);
+        push_vector(v, &value);
     }
 }
 
@@ -64,15 +64,6 @@ void process(int choice) {
             printf("Введите элементы второго вектора.\n");
             float_input(v2);
             break;
-        case 3:
-            printf("=== Работа с вектором комплексных чисел ===\n");
-            v1 = create_complex_vector();
-            v2 = create_complex_vector();
-            printf("Введите элементы первого вектора.\n");
-            complex_input(v1);
-            printf("Введите элементы второго вектора.\n");
-            complex_input(v2);
-            break;
         case 0:
             printf("Выход из программы!\n");
             return;
@@ -80,19 +71,17 @@ void process(int choice) {
             printf("Неправильный выбор! Повторите еще раз!\n");
     }
 
-    // Вывод векторов.
+    
     printf("\nПервый вектор: ");
     print(v1);
     printf("\nВторой вектор: ");
     print(v2);
 
-    // Сложение векторов.
-    Vector* sum = vector_add(v1, v2);
+    Vector* sum = sum_vector(v1, v2);
     printf("Сумма векторов: ");
     print(sum);
 
-    // Скалярное произведение.
-    double result = dot_vectors(v1, v2);
+    double result = multiply_vector(v1, v2);
     printf("Скалярное произведение: %.2f\n", result);
 
     vector_free(v1);

@@ -17,7 +17,7 @@ double multiply_float_vector(void *a, void *b){
 }
 
 Vector* create_float_vector(){
-    return createVector(sizeof(float), print_float_vector, sum_float_vector, multiply_float_vector);
+    return create_vector(sizeof(float), print_float_vector, sum_float_vector, multiply_float_vector);
 }
 
 #endif

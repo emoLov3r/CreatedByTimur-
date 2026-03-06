@@ -1,7 +1,7 @@
-#include "vector.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdlib.h>
+#include <string.h>
+#include "../include/vector.h"
 
 Vector* create_vector (size_t element_size, void(*print_elements)(void*),
                         void(*sum_elements)(void*, void*, void*), 
@@ -39,14 +39,14 @@ void push_vector (Vector *v, void* value){
         if (v -> data == NULL){
             return;
         }
-        v -> data = new_data; // Меняем указатели
-        v -> capacity = new_capacity; // Меняем значение
+        v -> data = new_data; 
+        v -> capacity = new_capacity; 
     }
 
-    char* target = (char* )v -> data + (v -> lenght * v -> element_size); // Итерируемся до места добавления нового элемента
-    memcpy(target, value, v -> element_size); // Добавляем элемент
+    char* target = (char* )v -> data + (v -> lenght * v -> element_size); 
+    memcpy(target, value, v -> element_size); 
 
-    v -> lenght++; // Так как добавили новый элемент, увеличиваем размер динамиечского массива.
+    v -> lenght++; 
     return;
 }
 
@@ -55,7 +55,7 @@ void* get_vector(Vector *v, size_t index){
         return (char *)v -> data + (index * v -> element_size);
     }
     else{
-        return -1;
+        return NULL;
     }
 }
 
@@ -88,7 +88,7 @@ Vector* sum_vector(Vector *v1, Vector *v2){
     for (size_t i = 0; i < v1 ->lenght; i++){
         void* sum = calloc(1 ,v1 -> element_size);
         if (sum ==NULL){
-            vector_free(result);
+            free_vector(result);
             return NULL;
         }
         void* elements1 = get_vector(v1, i);
@@ -114,7 +114,7 @@ double multiply_vector(Vector *v1, Vector *v2){
     return result;
 }
 
-void freeVector(Vector *v){
+void free_vector(Vector *v){
     free(v -> data);
     v -> data = NULL;
     v -> lenght = 0;
