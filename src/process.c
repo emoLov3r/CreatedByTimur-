@@ -73,18 +73,18 @@ void process(int choice) {
 
     
     printf("\nПервый вектор: ");
-    print(v1);
+    print_vector(v1);
     printf("\nВторой вектор: ");
-    print(v2);
+    print_vector(v2);
 
     Vector* sum = sum_vector(v1, v2);
     printf("Сумма векторов: ");
-    print(sum);
+    print_vector(sum);
 
     double result = multiply_vector(v1, v2);
     printf("Скалярное произведение: %.2f\n", result);
 
-    vector_free(v1);
-    vector_free(v2);
-    vector_free(sum);
+    free_vector(v1);
+    free_vector(v2);
+    free_vector(sum);
 }
