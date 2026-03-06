@@ -5,7 +5,7 @@
 
 
 void print_int_vector(void *element){
-    printf("%.2f ", *(int *)element);
+    printf("%.2d ", *(int *)element);
 }
 
 void sum_int_vector(void *result, void *a, void *b){
