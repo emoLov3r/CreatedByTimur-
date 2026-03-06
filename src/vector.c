@@ -88,7 +88,7 @@ Vector* sum_vector(Vector *v1, Vector *v2){
     for (size_t i = 0; i < v1 ->lenght; i++){
         void* sum = calloc(1 ,v1 -> element_size);
         if (sum ==NULL){
-            free_vector(result);
+            vector_free(result);
             return NULL;
         }
         void* elements1 = get_vector(v1, i);
@@ -115,7 +115,7 @@ double multiply_vector(Vector *v1, Vector *v2){
     return result;
 }
 
-void free_vector(Vector *v){
+void vector_free(Vector *v){
     free(v -> data);
     v -> data = NULL;
     v -> lenght = 0;
