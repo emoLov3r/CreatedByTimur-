@@ -75,9 +75,8 @@ void process(int choice) {
     printf("\nПервый вектор: ");
     print_vector(v1);
     printf("\nВторой вектор: ");
-    printf("\n");
     print_vector(v2);
-
+    printf("\n");
     Vector* sum = sum_vector(v1, v2);
     printf("Сумма векторов: ");
     print_vector(sum);
